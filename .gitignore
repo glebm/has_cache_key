@@ -1,0 +1,6 @@
+.rvmrc
+.idea/
+.bundle/
+log/*.log
+pkg/
+
