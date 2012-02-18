@@ -1,4 +1,4 @@
-.gem
+*.gem
 .rvmrc
 .idea/
 .bundle/

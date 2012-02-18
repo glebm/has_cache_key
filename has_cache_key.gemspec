@@ -6,6 +6,7 @@ Gem::Specification.new do |s|
   s.author = 'Gleb Mazovetskiy'
   s.email = 'glex.spb@gmail.com'
   s.summary = "Automatic Cache Key Management for Rails Models. v#{HasCacheKey::VERSION}"
+  s.homepage = "https://github.com/glebm/has_cache_key"
   s.description = "Allows you to define multiple cache keys on the module, and automatically expires them."
   s.files = Dir["{app,lib,config}/**/*"] + ["MIT-LICENSE", "Rakefile", "Gemfile", "README.md"]
   s.add_dependency "rails", "~> 3.2"

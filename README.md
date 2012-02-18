@@ -25,14 +25,14 @@ Define cache_keys in your model
 To get a cache key in you can use one of the following:
 
 
-   # Default cache key
-   @listing.cache_key
+    # Default cache key
+    @listing.cache_key
 
-   # A cache key
-   @listing.cache_key(:category_in_location_home_page)
+    # A cache key
+    @listing.cache_key(:category_in_location_home_page)
 
-   # A cache key without a listing instance:
-   Listing.cache_key(:category_in_location_home_page, category_id: 10, location_id: 10)
+    # A cache key without a listing instance:
+    Listing.cache_key(:category_in_location_home_page, category_id: 10, location_id: 10)
 
 
 Your cache keys will be automatically updates after_save and after_destroy according to the attribute changes.
