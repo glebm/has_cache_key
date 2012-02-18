@@ -1,3 +1,9 @@
+PATH
+  remote: .
+  specs:
+    has_cache_key (0.0.1)
+      rails (~> 3.2)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -92,6 +98,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  rails (~> 3.2)
+  has_cache_key!
   rspec
   sqlite3

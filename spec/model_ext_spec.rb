@@ -66,15 +66,16 @@ describe HasCacheKey::ModelExt do
   it 'expires caches' do
     listing = Listing.create(location_id: 41, language_id: 10)
     original_method = listing.method(:expire_cache_keys)
-    listing.should_receive(:expire_cache_keys).exactly(1).times do |*args|
+    listing.should_receive(:expire_cache_keys).exactly(2).times do |*args|
       original_method.call(*args)
     end
 
-    listing.should_receive(:expire_fragment_key).exactly(7).times do |*args|
+    listing.should_receive(:expire_fragment_key).exactly(7 + 3).times do |*args|
       puts "--  Expiring #{args.join(', ')}"
     end
 
     listing.update_attributes location_id: 42, language_id: 20
+    listing.destroy
   end
 
   after :all do

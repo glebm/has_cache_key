@@ -6,6 +6,7 @@ module HasCacheKey
     def self.included(base)
       base.extend ClassMethods
       base.after_save :expire_cache_keys
+      base.after_destroy :expire_cache_keys
     end
 
     def expire_cache_keys
