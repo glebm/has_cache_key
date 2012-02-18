@@ -8,10 +8,7 @@ module HasCacheKey
     #  PRODUCT{i in 0..COUNT(slot))}
     #             COUNT(VALUES(slot)))
     def each(&block)
-      if @results
-        @results.each &block
-        return self
-      end
+      return @results.each(&block) if @results
       @results = []
       cur_v_i = Array.new(@data.keys.length, 0)
       keys = @data.keys.sort_by(&:to_s)
