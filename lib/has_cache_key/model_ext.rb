@@ -9,7 +9,7 @@ module HasCacheKey
       base.after_destroy :expire_cache_keys
     end
 
-    def expire_cache_keys
+    def expire_cache_keys(*args)
       # First, assemble all keys the listing is involved in, and the values that were affected
       affected_values_by_key = {}
       attr_changes = self.changes
